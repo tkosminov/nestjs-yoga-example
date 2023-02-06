@@ -1,0 +1,42 @@
+{
+  "APP_SETTINGS": {
+    "port": 8080,
+    "body_limit": "50mb",
+    "body_parameter_limit": 50000
+  },
+  "CORS_SETTINGS": {
+    "allowed_origins": [],
+    "allowed_paths": [],
+    "allowed_methods": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "allowed_credentials": false,
+    "allowed_headers": []
+  },
+  "LOGGER_SETTINGS": {
+    "level": "info",
+    "silence": [
+      "healthz"
+    ]
+  },
+  "DB_SETTINGS": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "nestjs_yoga",
+    "logging": "all",
+    "synchronize": true
+  },
+  "GRAPHQL_SETTINGS": {
+    "playground": true,
+    "debug": true,
+    "introspection": true,
+    "installSubscriptionHandlers": true
+  }
+}
