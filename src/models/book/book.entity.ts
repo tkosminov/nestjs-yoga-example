@@ -35,6 +35,6 @@ export class Book {
   @Column('boolean', { nullable: false, default: () => 'false' })
   public is_private: boolean;
 
-  @OneToMany(() => Section, (section) => section.book, { onDelete: 'CASCADE' })
+  @OneToMany(() => Section, (section) => section.book)
   public sections: Section[];
 }
