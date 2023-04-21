@@ -22,17 +22,17 @@ export class GraphQLOptions implements GqlOptionsFactory {
       graphiql: true,
       driver: YogaDriver,
       autoSchemaFile: true,
-      context: ({ req }: { req: Request & { logger_store: LoggerStore } }) => ({
+      context: ({ req }: { req: Request & { logger_store: LoggerStore; current_user: ICurrentUser } }) => ({
         req,
         logger_store: req.logger_store,
-        current_user: null,
+        current_user: req.current_user || ({ id: 1 } as ICurrentUser),
       }),
       transformSchema: (schema: GraphQLSchema) => {
         return schema;
       },
       plugins: [
         useResponseCache({
-          session: ({ current_user }: { current_user: unknown }) => String(current_user),
+          session: ({ current_user }: { current_user: ICurrentUser }) => String(current_user.id),
           ttl: process.env.CACHE_TTL ? +process.env.CACHE_TTL : 5_000,
           invalidateViaMutation: true,
         }),

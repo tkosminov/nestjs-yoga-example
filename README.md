@@ -5,7 +5,7 @@
 
 ## Dependencies
 
-* [NodeJS 16](https://nodejs.org/download/release/latest-v16.x/)
+* [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/)
 * [PostgreSQL 13](https://www.postgresql.org/download/)
 
 ## Installation

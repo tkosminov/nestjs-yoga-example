@@ -16,3 +16,7 @@ interface ILogSettings {
   readonly level: string;
   readonly silence: string[];
 }
+
+interface ICurrentUser {
+  id: number;
+}
