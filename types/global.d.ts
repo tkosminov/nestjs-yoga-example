@@ -20,3 +20,11 @@ interface ILogSettings {
 interface ICurrentUser {
   id: number;
 }
+
+interface IGraphQLSettings {
+  graphiql: boolean;
+}
+
+interface IGraphQLRemoteApi {
+  [api_name: string]: string;
+}

@@ -10,12 +10,13 @@ import { serve, setup } from 'swagger-ui-express';
 import { LoggerStore } from '../logger/logger.store';
 
 import { GraphQLOptions } from './graphql.options';
+import { GraphQLSchemaLoaderModule } from './schema-loader/schema-loader.module';
 
 @Global()
 @Module({
   imports: [
     NestJSGraphQLModule.forRootAsync<YogaDriverConfig>({
-      imports: [],
+      imports: [GraphQLSchemaLoaderModule],
       useClass: GraphQLOptions,
       inject: [],
       driver: YogaDriver,
