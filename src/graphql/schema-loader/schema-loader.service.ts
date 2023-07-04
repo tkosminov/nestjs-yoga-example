@@ -63,7 +63,7 @@ export class GraphQLSchemaLoaderService {
   }
 
   private createExecutor(uri: string, abort: boolean): AsyncExecutor {
-    return async ({ document, variables, operationName, extensions, context }) => {
+    return async ({ document, variables, operationName, extensions }) => {
       const query = print(document);
 
       const abort_controller: AbortController = new AbortController();

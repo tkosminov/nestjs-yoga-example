@@ -1,6 +1,6 @@
 # NestJS-Yoga-Example
 
-* NestJS 9
+* NestJS 10
 * TypeORM 0.3
 
 ## Dependencies
