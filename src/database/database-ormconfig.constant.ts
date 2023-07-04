@@ -15,7 +15,7 @@ export function getOrmConfig(): TypeOrmModuleOptions {
     database: `${process.env.NODE_ENV}_${settings.database}`,
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
-    migrationsRun: true,
+    migrationsRun: false,
     synchronize: settings.synchronize || false,
     logging: settings.logging,
   };
